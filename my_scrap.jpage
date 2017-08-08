@@ -1,0 +1,18 @@
+String a = "PARAM::abc,PARAM::cde";
+
+java.util.regex.Pattern p = java.util.regex.Pattern.compile("PARAM:(.+?),");
+java.util.regex.Matcher m = p.matcher(a);
+
+int i = 0;
+
+while(m.find()){
+	System.out.println(m.group(1));
+}
+
+
+String str = "ZZZZL <%= dsn %> AFFF <%= AFG %>";
+Pattern pattern = Pattern.compile("<%=(.*?)%>");
+Matcher matcher = pattern.matcher(str);
+while (matcher.find()) {
+    System.out.println(matcher.group(1));
+}
