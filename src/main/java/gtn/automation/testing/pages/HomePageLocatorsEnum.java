@@ -8,7 +8,11 @@ public enum HomePageLocatorsEnum {
 	
 	private final String text;
 
-    private HomePageLocatorsEnum(String text) {
+    public String getText() {
+		return text;
+	}
+
+	private HomePageLocatorsEnum(String text) {
     	this.text = text;
     }
     

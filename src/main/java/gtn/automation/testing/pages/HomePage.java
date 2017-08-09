@@ -11,7 +11,7 @@ public class HomePage {
 	public static WebElement ele_Navigator(WebDriver driver, String navName) {
 		String locator = 
 				LocatorResolver.resolveParameters(
-						HomePageLocatorsEnum.lnk_HomeNavigator.name(), navName);
+						HomePageLocatorsEnum.lnk_HomeNavigator.getText(), navName);
 		
 		return driver.findElement(By.xpath(locator));
 	}

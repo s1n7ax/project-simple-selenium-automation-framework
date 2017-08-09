@@ -8,16 +8,16 @@ import gtn.automation.core.test_helper.LocatorResolver;
 
 public class LoginPage {
 
-	public WebElement tf_UserInputs(WebDriver driver, String inputFieldName) {
+	public static WebElement tf_UserInputs(WebDriver driver, String inputFieldName) {
 		String locator = 
 				LocatorResolver.resolveParameters(
-						LoginPageLocatorEnum.tf_UserInputs.name(), inputFieldName);
+						LoginPageLocatorEnum.tf_UserInputs.getText(), inputFieldName);
 		
 		return driver.findElement(By.xpath(locator));
 	}
 	
-	public WebElement btn_Submit(WebDriver driver) {
-		String locator = LoginPageLocatorEnum.btn_Submit.name();
+	public static WebElement btn_Submit(WebDriver driver) {
+		String locator = LoginPageLocatorEnum.btn_Submit.getText();
 		return driver.findElement(By.xpath(locator));
 	}
 }

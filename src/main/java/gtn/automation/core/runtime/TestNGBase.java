@@ -1,6 +1,11 @@
 package gtn.automation.core.runtime;
 
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -12,6 +17,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 import gtn.automation.core.runtime_helper.DriverHandler;
+import gtn.automation.core.runtime_helper.PropertyReader;
 import gtn.automation.core.runtime_helper.exceptions.InvalideBrowserType;
 
 
@@ -22,18 +28,13 @@ import gtn.automation.core.runtime_helper.exceptions.InvalideBrowserType;
  */
 public abstract class TestNGBase {
 
-	WebDriver driver;
+	public WebDriver driver;
 	
 	/*
 	 * before all tests in the suite
 	 */
-	@Parameters({"browser", "driver_path"})
 	@BeforeSuite()
-	public void beforeSuite(String browser, String driverPath) throws InvalideBrowserType {
-		System.out.println("Starting @BeforeSuite");
-		
-		// creates a new driver for the test suite in the thread
-		driver = DriverHandler.getNewDriver(browser, driverPath);
+	public void beforeSuite() throws InvalideBrowserType, IOException {
 	}
 
 	/*
@@ -41,7 +42,6 @@ public abstract class TestNGBase {
 	 */
 	@BeforeClass()
 	public void beforeClass() {
-		System.out.println("Starting @BeforeClass");
 	}
 
 	/*
@@ -49,38 +49,51 @@ public abstract class TestNGBase {
 	 */
 	@BeforeTest()
 	public void beforeTest() {
-		System.out.println("Starting @BeforeTest");
 	}
 
 	/*
 	 * before each and every test
 	 */
+	@Parameters({"browser", "driver_path"})
 	@BeforeMethod()
-	public void beforeMethod() {
-		System.out.println("Starting @BeforeMethod");
+	public void beforeMethod(String browser, String driverPath) throws IOException, InvalideBrowserType {
+		// get runtime properties
+		PropertyReader prop= new PropertyReader("runtime.properties");
+		
+		int implecitTimeout = Integer.parseInt(prop.getProperty("IMPLECIT_WAIT_TIME"));
+		String url = prop.getProperty("APPLICATION_URL");
+		
+		// creates a new driver for the test suite in the thread
+		driver = DriverHandler.getNewDriver(browser, driverPath);
+		
+		// setting driver configuration
+		driver.manage().timeouts().implicitlyWait(implecitTimeout, TimeUnit.SECONDS);
+		driver.get(url);
+		
+		System.out.println(browser +" session created");
 	}
 
 	
 	@AfterSuite()
 	public void afterSuite() {
-		System.out.println("Starting @AfterSuite");
 	}
 
 	@AfterClass()
 	public void afterClass() {
-		System.out.println("Starting @AfterClass");
 	}
 
 	@AfterTest()
 	public void afterTest() {
-		System.out.println("Starting @AfterTest");
 	}
 
 	@AfterMethod()
 	public void afterMethod() {
-		System.out.println("Starting @AfterMethod");
-		
 		// closing the created driver
 		driver.close();
+		
+		Capabilities cap = ((RemoteWebDriver) driver).getCapabilities();
+	    String browser = cap.getBrowserName().toLowerCase();
+		System.out.println(browser + " session closed");
+		
 	}
 }
