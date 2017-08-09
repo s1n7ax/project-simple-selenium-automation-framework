@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="4" guice-stage="DEVELOPMENT" verbose="10" name="Failed suite [TestSuite]" parallel="methods">
-  <parameter name="data_excel_file" value="dt_FormValidation.xlsx"/>
-  <parameter name="data_excel_file_sheet_name" value="Sheet1"/>
   <test name="Test(failed)" parallel="methods">
     <classes>
       <class name="gtn.automation.testing.testsuites.TS_FormValidation">
+        <parameter name="class" value="class"/>
         <methods>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
           <include name="afterClass"/>
           <include name="beforeSuite"/>
-          <include name="tc_RegistrationFormValidation3">
+          <include name="tc_RegistrationFormValidation3" invocation-numbers="0">
             <parameter name="browser" value="firefox"/>
-            <parameter name="driver_path" value="geckodriver.exe"/>
           </include> <!-- tc_RegistrationFormValidation3 -->
           <include name="afterSuite"/>
           <include name="afterTest"/>
-          <include name="tc_RegistrationFormValidation2">
+          <include name="tc_RegistrationFormValidation2" invocation-numbers="0">
             <parameter name="browser" value="firefox"/>
-            <parameter name="driver_path" value="geckodriver.exe"/>
           </include> <!-- tc_RegistrationFormValidation2 -->
           <include name="beforeMethod"/>
-          <include name="tc_RegistrationFormValidation" invocation-numbers="0">
-            <parameter name="browser" value="chrome"/>
-            <parameter name="driver_path" value="chromedriver.exe"/>
-          </include> <!-- tc_RegistrationFormValidation -->
           <include name="beforeClass"/>
         </methods>
       </class> <!-- gtn.automation.testing.testsuites.TS_FormValidation -->

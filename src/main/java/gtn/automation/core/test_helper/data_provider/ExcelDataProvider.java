@@ -2,7 +2,6 @@ package gtn.automation.core.test_helper.data_provider;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -15,7 +14,6 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.testng.ITestContext;
 
 public class ExcelDataProvider implements UserDataProviderIntf{
 	private String dataPackagePath = "src/main/java/gtn/automation/testing/data";
@@ -33,20 +31,10 @@ public class ExcelDataProvider implements UserDataProviderIntf{
 		if(excelSheetName == null)
 			throw new PropertyException("Unable to find property data_excel_file_sheet_name in TestNg XML");		
 		
-		return getMatrixFromExcel(excelFileName, excelSheetName);
-	}
-
-	// get provider by ITestContext
-	public Object[][] getProvider(ITestContext context) throws IOException, PropertyException {
-		// get the data_excel_file name from the TestNg XML
-		String excelFileName = context.getCurrentXmlTest().getParameter("data_excel_file");
-		String excelSheetName = context.getCurrentXmlTest().getParameter("data_excel_file_sheet_name");
 		
-		Path filePath = Paths.get(absDataPath.toString(), excelFileName);
-		
-		return getProvider(filePath.toString(), excelSheetName);
+		Path fileAbsPath = Paths.get(absDataPath.toString(), excelFileName);
+		return getMatrixFromExcel(fileAbsPath.toString(), excelSheetName);
 	}
-
 
 	public Object[][] getMatrixFromExcel(String excelPath, String sheetName) throws IOException{
 		// complete excel will be read and written in to this linked list
@@ -57,6 +45,9 @@ public class ExcelDataProvider implements UserDataProviderIntf{
 		excelWSheet = excelWBook.getSheet(sheetName);
 		
 		Iterator<Row> rowIterator = excelWSheet.iterator();
+		
+		// this is to ignore the headers
+		rowIterator.next();
 
 		// each row
 		while (rowIterator.hasNext()) {
@@ -69,10 +60,10 @@ public class ExcelDataProvider implements UserDataProviderIntf{
 			while (cellIterator.hasNext()) {
 				Cell currentCell = cellIterator.next();
 
-				tempRow.push(currentCell.getStringCellValue());
+				tempRow.add(currentCell.getStringCellValue());
 			}
 
-			result.push(tempRow);
+			result.add(tempRow);
 		}
 
 		return _2DLinkedListTo2DArr(result);

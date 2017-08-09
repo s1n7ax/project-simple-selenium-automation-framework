@@ -4,8 +4,6 @@ import java.io.IOException;
 
 import javax.xml.bind.PropertyException;
 
-import org.testng.ITestContext;
-
 public interface UserDataProviderIntf {
-	public Object[][] getProvider(ITestContext context) throws IOException, PropertyException;
+	public Object[][] getProvider(String fileName, String sheetName) throws IOException, PropertyException;
 }
