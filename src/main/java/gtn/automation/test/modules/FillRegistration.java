@@ -9,7 +9,7 @@ import gtn.automation.test.pages.CommonPage;
 
 public class FillRegistration {
 	public static final void run(WebDriver driver, String fName, String lName, String email, String pno, String gender,
-			String cmpName, String add1, String add2, String attachFilePath, String skillCount, String skills) {
+			String cmpName, String add1, String add2, String attachFilePath, String skillCount, String skills) throws InterruptedException {
 
 		// fill Step 1
 		CommonPage.tf_Inputs(driver, "First Name").sendKeys(fName);
@@ -57,11 +57,15 @@ public class FillRegistration {
 
 		// upload and done
 		CommonPage.btn_InputButtons(driver, "Upload").click();
-		CommonPage.btn_InputButtons(driver, "Done").click();
+//		CommonPage.btn_InputButtons(driver, "Done").click();
 
 		// switch to parent window
+		driver.close();
+		
 		driver.switchTo().window(parentWinId);
 
+		Thread.sleep(1000);
+		
 		// set the count and add
 		CommonPage.tf_InputsById(driver, "count").sendKeys(skillCount);
 		CommonPage.btn_ButtonsById(driver, "add").click();
@@ -81,8 +85,14 @@ public class FillRegistration {
 		String statusText = 
 				CommonPage.ele_DivByClass(driver, "alert alert-success alert-white rounded").getText();
 		
-		System.out.println("**********");
-		System.out.println(statusText);
+		// space
+		System.out.println();
+		
+		// status message
+		System.out.println("Form submit status message: " + statusText);
+		
+		// space
+		System.out.println();
 		
 	}
 }

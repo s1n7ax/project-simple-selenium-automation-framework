@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [TestSuite]" parallel="methods">
+  <test name="Test(failed)" parallel="methods">
+    <classes>
+      <class name="gtn.automation.test.testsuites.TS_FormValidation">
+        <parameter name="class" value="class"/>
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="tc_RegistrationFormValidation3" invocation-numbers="0">
+            <parameter name="browser" value="firefox"/>
+          </include> <!-- tc_RegistrationFormValidation3 -->
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="tc_RegistrationFormValidation2" invocation-numbers="0">
+            <parameter name="browser" value="firefox"/>
+          </include> <!-- tc_RegistrationFormValidation2 -->
+          <include name="afterSuite"/>
+          <include name="afterTest"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- gtn.automation.test.testsuites.TS_FormValidation -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->

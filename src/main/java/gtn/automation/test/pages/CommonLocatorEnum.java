@@ -15,7 +15,9 @@ public enum CommonLocatorEnum {
 	btn_AncButtons("//a[@type='button' and text()='<>']"),
 	btn_FileInputs("//input[@type='file' and @id='<>']"),
 	
-	frm_IFrameByName("//iframe[@name='<>']");
+	frm_IFrameByName("//iframe[@name='<>']"),
+	
+	tbl_TablesById("//table[@id='<>']");
 	
 	
 	

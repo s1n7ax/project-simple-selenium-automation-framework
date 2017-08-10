@@ -16,6 +16,7 @@ import gtn.automation.test.modules.FillRegistration;
 import gtn.automation.test.modules.GoToPage;
 import gtn.automation.test.modules.LogIn;
 import gtn.automation.test.modules.NavigateFromHomePage;
+import gtn.automation.test.modules.PrintProjectSchedule;
 
 public class TS_FormValidation extends TestNGBase {
 	public TS_FormValidation() throws IOException {
@@ -40,6 +41,9 @@ public class TS_FormValidation extends TestNGBase {
 		// fill the registration form
 		FillRegistration.run(getThreadLocalDriver().get(), fName, lName, email, pno, gender, cmpName, add1, add2,
 				attachFilePath, skillCount, skills);
+		
+		// print the project schedule table
+		PrintProjectSchedule.run(getThreadLocalDriver().get());
 	}
 
 	@Test(dataProvider = "excel_data_provider")
@@ -60,6 +64,9 @@ public class TS_FormValidation extends TestNGBase {
 		// fill the registration form
 		FillRegistration.run(getThreadLocalDriver().get(), fName, lName, email, pno, gender, cmpName, add1, add2,
 				attachFilePath, skillCount, skills);
+
+		// print the project schedule table
+		PrintProjectSchedule.run(getThreadLocalDriver().get());
 	}
 
 	@Test(dataProvider = "excel_data_provider")
@@ -80,6 +87,9 @@ public class TS_FormValidation extends TestNGBase {
 		// fill the registration form
 		FillRegistration.run(getThreadLocalDriver().get(), fName, lName, email, pno, gender, cmpName, add1, add2,
 				attachFilePath, skillCount, skills);
+
+		// print the project schedule table
+		PrintProjectSchedule.run(getThreadLocalDriver().get());
 	}
 
 	@Test(dataProvider = "excel_data_provider")
@@ -100,6 +110,9 @@ public class TS_FormValidation extends TestNGBase {
 		// fill the registration form
 		FillRegistration.run(getThreadLocalDriver().get(), fName, lName, email, pno, gender, cmpName, add1, add2,
 				attachFilePath, skillCount, skills);
+
+		// print the project schedule table
+		PrintProjectSchedule.run(getThreadLocalDriver().get());
 	}
 
 	@DataProvider(name = "excel_data_provider")

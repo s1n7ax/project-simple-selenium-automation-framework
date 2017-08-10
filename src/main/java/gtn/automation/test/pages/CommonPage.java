@@ -86,4 +86,11 @@ public class CommonPage {
 
 		return driver.findElement(By.xpath(locator));
 	}
+	
+	
+	public static WebElement tbl_TablesById(WebDriver driver, String tableId) {
+		String locator = LocatorResolver.resolveParameters(CommonLocatorEnum.tbl_TablesById.getText(), tableId);
+		
+		return driver.findElement(By.xpath(locator));
+	}
 }

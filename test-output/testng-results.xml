@@ -1,34 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="3" total="4" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29533" started-at="2017-08-10T04:41:39Z" finished-at="2017-08-10T04:42:09Z">
+  <suite name="TestSuite" duration-ms="56617" started-at="2017-08-10T08:06:46Z" finished-at="2017-08-10T08:07:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="29533" started-at="2017-08-10T04:41:39Z" finished-at="2017-08-10T04:42:09Z">
+    <test name="Test" duration-ms="56617" started-at="2017-08-10T08:06:46Z" finished-at="2017-08-10T08:07:42Z">
       <class name="gtn.automation.test.testsuites.TS_FormValidation">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@7d9d1a19]" name="beforeSuite" is-config="true" duration-ms="44" started-at="2017-08-10T10:11:39Z" finished-at="2017-08-10T10:11:39Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2]" name="beforeSuite" is-config="true" duration-ms="0" started-at="2017-08-10T13:36:46Z" finished-at="2017-08-10T13:36:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@7d9d1a19]" name="beforeTest" is-config="true" duration-ms="1" started-at="2017-08-10T10:11:39Z" finished-at="2017-08-10T10:11:39Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2]" name="beforeTest" is-config="true" duration-ms="0" started-at="2017-08-10T13:36:46Z" finished-at="2017-08-10T13:36:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@7d9d1a19]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-08-10T10:11:39Z" finished-at="2017-08-10T10:11:39Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-08-10T13:36:46Z" finished-at="2017-08-10T13:36:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@7d9d1a19]" name="beforeMethod" is-config="true" duration-ms="14025" started-at="2017-08-10T10:11:40Z" finished-at="2017-08-10T10:11:54Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2]" name="beforeMethod" is-config="true" duration-ms="32249" started-at="2017-08-10T13:36:46Z" finished-at="2017-08-10T13:37:18Z">
           <params>
             <param index="0">
-              <value is-null="true"/>
+              <value>
+                <![CDATA[chrome]]>
+              </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="tc_RegistrationFormValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@7d9d1a19]" name="tc_RegistrationFormValidation" duration-ms="14099" started-at="2017-08-10T10:11:54Z" data-provider="excel_data_provider" finished-at="2017-08-10T10:12:08Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2]" name="beforeMethod" is-config="true" duration-ms="23003" started-at="2017-08-10T13:36:46Z" finished-at="2017-08-10T13:37:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2]" name="beforeMethod" is-config="true" duration-ms="8821" started-at="2017-08-10T13:36:46Z" finished-at="2017-08-10T13:36:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2]" name="beforeMethod" is-config="true" duration-ms="46000" started-at="2017-08-10T13:36:46Z" finished-at="2017-08-10T13:37:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="tc_RegistrationFormValidation1(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2]" name="tc_RegistrationFormValidation1" duration-ms="13811" started-at="2017-08-10T13:36:55Z" data-provider="excel_data_provider" finished-at="2017-08-10T13:37:09Z">
           <params>
             <param index="0">
               <value>
@@ -96,94 +131,279 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[unknown error: path is not absolute: C:\Users\snmuhandiram\Desktop\sample.txt
-  (Session info: chrome=58.0.3029.110)
-  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Linux 4.4.0-53-generic x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 31 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'tax-pc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-53-generic', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=/tmp/.org.chromium.Chromium.X5UgPQ}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.110, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 21eb0b013dfbd0242fcca533bb032ae3]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: path is not absolute: C:\Users\snmuhandiram\Desktop\sample.txt
-  (Session info: chrome=58.0.3029.110)
-  (Driver info: chromedriver=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8),platform=Linux 4.4.0-53-generic x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 31 milliseconds
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'tax-pc', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-53-generic', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.31.488763 (092de99f48a300323ecf8c2a4e2e7cab51de5ba8), userDataDir=/tmp/.org.chromium.Chromium.X5UgPQ}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.110, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 21eb0b013dfbd0242fcca533bb032ae3
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
-	at gtn.automation.test.modules.FillRegistration.run(FillRegistration.java:56)
-	at gtn.automation.test.testsuites.TS_FormValidation.tc_RegistrationFormValidation(TS_FormValidation.java:41)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tc_RegistrationFormValidation -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@7d9d1a19]" name="afterMethod" is-config="true" duration-ms="96" started-at="2017-08-10T10:12:08Z" finished-at="2017-08-10T10:12:09Z">
+        </test-method> <!-- tc_RegistrationFormValidation1 -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2]" name="afterMethod" is-config="true" duration-ms="23981" started-at="2017-08-10T13:37:09Z" finished-at="2017-08-10T13:37:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=tc_RegistrationFormValidation status=FAILURE method=TS_FormValidation.tc_RegistrationFormValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@7d9d1a19] output={null}]]]>
+                <![CDATA[[TestResult name=tc_RegistrationFormValidation1 status=SUCCESS method=TS_FormValidation.tc_RegistrationFormValidation1(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@7d9d1a19]" name="afterClass" is-config="true" duration-ms="171" started-at="2017-08-10T10:12:09Z" finished-at="2017-08-10T10:12:09Z">
+        <test-method status="PASS" signature="tc_RegistrationFormValidation2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2]" name="tc_RegistrationFormValidation2" duration-ms="11535" started-at="2017-08-10T13:37:09Z" data-provider="excel_data_provider" finished-at="2017-08-10T13:37:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[krypton]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[krypton]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Srinesh]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Nisala]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SrineshNisal@Test.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[A777000000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Female]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Virtusa]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Address one]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Address two]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[C:\Users\snmuhandiram\Desktop\sample.txt]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[skill one,skill two]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_RegistrationFormValidation2 -->
+        <test-method status="PASS" signature="tc_RegistrationFormValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2]" name="tc_RegistrationFormValidation" duration-ms="15812" started-at="2017-08-10T13:37:18Z" data-provider="excel_data_provider" finished-at="2017-08-10T13:37:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[krypton]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[krypton]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Srinesh]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Nisala]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SrineshNisal@Test.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[A777000000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Female]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Virtusa]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Address one]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Address two]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[C:\Users\snmuhandiram\Desktop\sample.txt]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[skill one,skill two]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_RegistrationFormValidation -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2]" name="afterMethod" is-config="true" duration-ms="12004" started-at="2017-08-10T13:37:21Z" finished-at="2017-08-10T13:37:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc_RegistrationFormValidation2 status=SUCCESS method=TS_FormValidation.tc_RegistrationFormValidation2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="tc_RegistrationFormValidation3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2]" name="tc_RegistrationFormValidation3" duration-ms="9879" started-at="2017-08-10T13:37:32Z" data-provider="excel_data_provider" finished-at="2017-08-10T13:37:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[krypton]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[krypton]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Srinesh]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Nisala]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SrineshNisal@Test.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[A777000000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Female]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Virtusa]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Address one]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Address two]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[C:\Users\snmuhandiram\Desktop\sample.txt]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[skill one,skill two]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_RegistrationFormValidation3 -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2]" name="afterMethod" is-config="true" duration-ms="62" started-at="2017-08-10T13:37:34Z" finished-at="2017-08-10T13:37:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc_RegistrationFormValidation status=SUCCESS method=TS_FormValidation.tc_RegistrationFormValidation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2]" name="afterMethod" is-config="true" duration-ms="168" started-at="2017-08-10T13:37:42Z" finished-at="2017-08-10T13:37:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc_RegistrationFormValidation3 status=SUCCESS method=TS_FormValidation.tc_RegistrationFormValidation3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2]" name="afterClass" is-config="true" duration-ms="9" started-at="2017-08-10T13:37:42Z" finished-at="2017-08-10T13:37:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@7d9d1a19]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-08-10T10:12:09Z" finished-at="2017-08-10T10:12:09Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-08-10T13:37:42Z" finished-at="2017-08-10T13:37:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@7d9d1a19]" name="afterSuite" is-config="true" duration-ms="0" started-at="2017-08-10T10:12:09Z" finished-at="2017-08-10T10:12:09Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:gtn.automation.test.testsuites.TS_FormValidation@6a41eaa2]" name="afterSuite" is-config="true" duration-ms="1" started-at="2017-08-10T13:37:42Z" finished-at="2017-08-10T13:37:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- gtn.automation.test.testsuites.TS_FormValidation -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- TestSuite -->
 </testng-results>

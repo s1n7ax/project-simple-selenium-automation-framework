@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import gtn.automation.core.runtime.helper.exceptions.InvalideBrowserType;
 
@@ -26,11 +27,13 @@ public class DriverHandler {
 		case "firefox": {
 			System.setProperty("webdriver.gecko.driver", driverPath.get("firefox"));
 			
-//			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-//			capabilities.setCapability("browserName", "firefox");
-//			capabilities.setCapability(FirefoxDriver.MARIONETTE, true);
+			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+			capabilities.setCapability("browserName", "firefox");
+			capabilities.setCapability("javascriptEnabled", true);
+			capabilities.setCapability("handlesAlerts", true);
+			capabilities.setCapability("marionette", true);
  
-			driver = new FirefoxDriver();
+			driver = new FirefoxDriver(capabilities);
 		}
 			break;
 

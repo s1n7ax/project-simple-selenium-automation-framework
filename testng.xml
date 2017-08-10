@@ -5,7 +5,7 @@
 
 	<test name="Test" preserve-order="true">
 		<classes>
-			<class name="gtn.automation.testing.testsuites.TS_FormValidation">
+			<class name="gtn.automation.test.testsuites.TS_FormValidation">
 				<parameter name="class" value="class"></parameter>
 				<methods>
 					<include name="tc_RegistrationFormValidation">
