@@ -23,11 +23,11 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-import gtn.automation.core.runtime_helper.DriverHandler;
-import gtn.automation.core.runtime_helper.PropertyReader;
-import gtn.automation.core.runtime_helper.exceptions.InvalideBrowserType;
-import gtn.automation.core.runtime_helper.logger.TestCaseSummaryLogger;
-import gtn.automation.core.runtime_helper.logger.TestCaseSummaryModel;
+import gtn.automation.core.runtime.helper.DriverHandler;
+import gtn.automation.core.runtime.helper.PropertyReader;
+import gtn.automation.core.runtime.helper.exceptions.InvalideBrowserType;
+import gtn.automation.core.runtime.helper.logger.TestCaseSummaryLogger;
+import gtn.automation.core.runtime.helper.logger.TestCaseSummaryModel;
 
 /**
  * this class will defines common TestNg base excluding @Test which will be
@@ -132,7 +132,7 @@ public abstract class TestNGBase {
 	}
 
 	@AfterMethod()
-	public void afterMethod(ITestResult testResult) {
+	public synchronized void afterMethod(ITestResult testResult) {
 		// closing the created driver
 		getThreadLocalDriver().get().close();
 
@@ -141,13 +141,14 @@ public abstract class TestNGBase {
 		System.out.println(browser + " session closed");
 
 		// store test case details
-		synchronized (summary) {
-			TestCaseSummaryModel sumModel = new TestCaseSummaryModel(testResult, browser);
-			summary.add(sumModel);
-		}
+		TestCaseSummaryModel sumModel = new TestCaseSummaryModel(testResult, browser);
+		summary.add(sumModel);
 	}
 	
 	
+	/*
+	 * helper methods
+	 */
 	private void initializeDriver(String browser) throws InvalideBrowserType, IOException {
 		// creates a new driver for the test suite in the thread
 		getThreadLocalDriver().set(DriverHandler.getNewDriver(browser, driverPaths));
